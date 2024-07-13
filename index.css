@@ -1,0 +1,382 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+   
+    align-items: center;
+    flex-direction: column;
+    background-color:  #8CC461;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    ;
+
+}
+.score-con{
+    max-width: 100%;
+    width: 950px;
+     border: 3px solid #ffffff;
+    margin-top: 1rem;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px ;
+    color: white;
+    min-height: 28vh;
+}
+.logo{
+    font-size: 36px;
+    font-weight: 600;
+}
+.score{
+    text-align: center;
+    /* height: 92%; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-around;
+    font-size:48px;
+    
+
+}
+.score p{
+font-size: 18px;
+}
+.score_1{
+    background-color: #ffffff;
+    padding: 20px;
+    margin: 10px;
+    width: 160px;
+    border-radius:8px ;
+
+
+}
+.score_1 p{
+    color: #656565;
+    font-weight: 600;
+    letter-spacing: 1px;
+
+}
+.score_1 span{
+    color: #252525;
+    font-size:48px;
+    font-weight: 600;
+}
+
+.game-con{
+    width: 100%;
+    min-height: 69vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+}
+.info{
+    width: 550px;
+    min-height: 10vh;
+    font-size: 1.2rem;
+    margin: 1rem 0 0 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.option{
+    max-width: 100%;
+    width: 700px;
+    min-height: 49vh;
+    display: grid;
+    place-content: center;
+    position: relative;
+
+}
+.con{
+    position: absolute;
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    padding: 15px;
+    cursor: pointer;
+  
+
+}
+.computer{
+    position: absolute;
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    padding: 15px;
+    display: none;
+  
+}
+.sci-con{
+    background-color: #BD00FF;
+    right: 9rem;
+    top: 2%;
+}
+
+.rock-con{
+    background-color: #0074B6;
+  
+    left: 9rem;
+    top: 2%;
+
+}
+
+.paper-con{
+    background-color: #FFA943;
+    left: 17.5rem;
+    top: 52%;
+}
+
+.item{
+    background: #eee;
+    height: 100%;
+    border-radius: 50%;
+    display: grid;
+    place-content: center;
+}
+.tang{
+    /* filter: blur(3px); */
+    opacity: 0.7;
+}
+
+
+
+.user, 
+.machine{
+    opacity: 0;
+}
+
+.btn-div{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    padding: 0 2rem 1rem 0;
+}
+
+.btn-rule{
+    padding: 8px 30px;
+    border: 2px solid #fff;
+    background-color: transparent;
+    outline: none;
+    color: #fff;
+    border-radius: 5px;
+    font-weight: 400;
+    letter-spacing: 3px;
+    font-size: 16px;
+    cursor: pointer;
+   
+}
+
+.rule-modal{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    top: 0;
+    display: none;
+    
+
+   
+
+}
+/* .rule-modal::before{
+    position: absolute;
+    content: "";
+    background: #000;
+    opacity: 0.6;
+    width: 100%;
+    height: 100%;
+} */
+
+/* dfddddddddddddd */
+
+
+
+.close{
+    /* flex-direction: column;    border: 3px solid #fff; */
+    border-radius: 5px; 
+    padding: 25px;
+    width:450px ;
+
+}
+.rule-info li{
+    list-style: square;
+    color: #FFD600;
+    
+}
+.rule-info li span{
+    color: white;
+}
+.rule-info h2 {
+    text-align: center;
+    color: white;
+}
+
+/* dddddddddddddd */
+
+.rule-img{
+    z-index: 1;
+    background-color:#004429;
+    border: 3px solid white;
+    border-radius: 10px;
+    transform: translateY(-200%);
+    transition: all 0.4s ease;
+}
+.rule-img  div{
+    display: block;
+    float: right;
+    /* justify-content: space-between; */
+    /* align-items: center; */
+   
+}
+.clo{
+    background: transparent;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    
+}
+
+
+.win-modal{
+    position: fixed;
+        /* width: 100%; */
+    height: 100vh;
+    display: grid;
+    place-content: center;
+    top: 0;
+    display: none;
+
+}
+
+/* .win-modal::before{
+    position: absolute;
+    content: "";
+    background: #000;
+    opacity: 0.6;
+    width: 100%;
+    height: 100%;
+} */
+
+/* .winner, .play{
+    z-index: 1;
+
+} */
+.winner{
+    color: white;
+    padding-bottom: 1rem;
+    letter-spacing: 3px;
+}
+.play{
+    background: #eee;
+    letter-spacing: 1px;
+    outline: none;
+    cursor: pointer;
+    padding: 10px 20px;
+    font-size: 15px;
+    border: none; 
+    border-radius: 8px;
+}
+.show{
+    left: 3rem;
+    top: 2%;
+}
+.right{
+    left: 30.5rem;
+    top: 3%;
+}
+#btn-next{
+    padding: 10px 30px;
+    border: 2px solid #fff;
+    background-color: transparent;
+    outline: none;
+    color: #fff;
+    border-radius: 5px;
+    font-weight: 400;
+    letter-spacing: 3px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-left: 5px;
+    visibility: hidden;
+}
+
+.winbox{
+ 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        
+ 
+   
+}
+.container {
+    text-align: center;
+    color: white;
+}
+.trophy {
+    display: grid;
+    place-content: center;
+    font-size: 100px;
+    margin-bottom: 20px;
+}
+.message {
+    font-size: 48px;
+    margin: 10px 0;
+}
+.submessage {
+    font-size: 24px;
+    margin-bottom: 30px;
+}
+.play-again {
+    background: #eee;
+    letter-spacing: 1px;
+    outline: none;
+    cursor: pointer;
+    padding: 10px 20px;
+    font-size: 15px;
+    border: none; 
+    border-radius: 8px;
+}
+
+.rules {
+    font-size: 14px;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    color: white;
+    text-decoration: none;
+}
+
+
+.trophy img{
+    left: 30.5rem;
+    top: 3%;    
+}
+.star{
+    left: 30.5rem;
+    top: 23%;
+}
+
+#winbox{
+    position: fixed;
+        /* width: 100%; */
+    height: 100vh;
+    display: grid;
+    place-content: center;
+    top: 0;
+    display: none;
+
+}
